@@ -1,10 +1,12 @@
+from abc import ABC, abstractmethod
 class Shape:
     def __init__(self, name):
         self.name = name
 
+    @abstractmethod
     def area(self):
         pass
-
+    
     def __str__(self):
         return self.name
 
