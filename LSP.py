@@ -1,10 +1,13 @@
+from abc import ABC, abstractmethod
 
-class Flying:
+class Flying(ABC):
+    @abstractmethod
     def fly(self):
         pass
 
 
-class NonFlying:
+class NonFlying(ABC):
+    @abstractmethod
     def walk(self):
         pass
 
