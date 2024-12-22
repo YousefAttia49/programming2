@@ -45,7 +45,6 @@ class EmployeeManager:
                 "You are not eligible for promotion.", self.employee.name)
 
 
-# Example usage
 employee = Employee("John Doe", "Software Engineer", 55000)
 promoter = Promoter()
 salary_manager = SalaryManager()
