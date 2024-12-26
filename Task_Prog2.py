@@ -1,7 +1,6 @@
 from abc import ABC, abstractmethod
 
 
-# Interface Segregation Principle
 class Deposit(ABC):
     @abstractmethod
     def deposit(self, amount):
@@ -20,7 +19,6 @@ class BalanceInfo(ABC):
         pass
 
 
-# ٍSingle Responsibility Principle
 class Bank(Deposit, Withdraw, BalanceInfo):
     def __init__(self, acno, name, balance):
         self.name = name
@@ -43,7 +41,6 @@ class Bank(Deposit, Withdraw, BalanceInfo):
         print(f'MR: {self.name} : Your current balance is {self.balance}')
 
 
-# Open Closed Principle
 class SavingsAccount(Bank):
     def __init__(self, acno, name, balance, interest_rate):
         super().__init__(acno, name, balance)
@@ -54,7 +51,6 @@ class SavingsAccount(Bank):
         print(f'MR: {self.name} : Your interest is {interest}$')
 
 
-# Dependency Inversion Principle
 class TransactionProcessor:
     def __init__(self, bank_account: Bank):
         self.bank_account = bank_account
